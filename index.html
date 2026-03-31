@@ -876,11 +876,17 @@
                 gap: 0;
                 padding: 1rem 0;
                 border-bottom: 1px solid var(--border);
-                transform: translateY(-110%);
-                transition: transform 0.3s ease;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-8px);
+                transition: transform 0.3s ease, opacity 0.25s ease;
             }
 
-            .nav-links.open { transform: translateY(0); }
+            .nav-links.open {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
 
             .nav-links li { width: 100%; text-align: center; }
 
