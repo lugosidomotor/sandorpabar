@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects &mdash; Dr. S&aacute;ndor Attila Pabar</title>
     <meta name="description" content="Data Science portfolio and learning journey of Dr. Sándor Attila Pabar — 10 progressive projects from EDA to MLOps.">
+    <meta name="keywords" content="Data Science portfolio, Python, Machine Learning, MLOps, EDA, soil science, Sándor Attila Pabar">
+    <meta name="author" content="Dr. Sándor Attila Pabar">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Projects — Dr. Sándor Attila Pabar">
+    <meta property="og:description" content="Data Science portfolio — 10 progressive projects from EDA to MLOps.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lugosidomotor.github.io/sandorpabar/projects.html">
+    <meta property="og:image" content="https://lugosidomotor.github.io/sandorpabar/pic.jpg">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://lugosidomotor.github.io/sandorpabar/projects.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -602,6 +613,8 @@
     </style>
 </head>
 <body>
+    <a href="#projects-page" class="skip-link" style="position:absolute;top:-100%;left:1rem;background:var(--primary);color:#fff;padding:0.5rem 1rem;border-radius:0 0 4px 4px;z-index:2000;font-size:0.85rem;font-weight:600;transition:top 0.2s">Skip to content</a>
+    <style>.skip-link:focus{top:0;color:#fff}</style>
 
     <!-- ── Navigation ── -->
     <nav id="navbar">
@@ -614,6 +627,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="thesis.html">Thesis</a></li>
+                <li><a href="learning-path.html">Learning Path</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#skills">Skills</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
@@ -631,7 +645,7 @@
     </header>
 
     <!-- ── Roadmap ── -->
-    <section class="roadmap-section">
+    <section class="roadmap-section" id="projects-page">
         <div class="container">
             <div class="roadmap-track reveal">
                 <div class="roadmap-node"><div class="roadmap-circle done">01</div><div class="roadmap-label">EDA</div></div>
@@ -963,7 +977,7 @@
     <!-- ── Footer ── -->
     <footer>
         <div class="container">
-            &copy; 2026 Dr. S&aacute;ndor Attila Pabar &middot; <a href="index.html">Back to CV</a>
+            &copy; <span id="footerYear">2025</span> Dr. S&aacute;ndor Attila Pabar &middot; <a href="index.html">Back to CV</a>
         </div>
     </footer>
 
@@ -1028,6 +1042,9 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
         revealElements.forEach(el => revealObserver.observe(el));
+
+        // Dynamic footer year
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
